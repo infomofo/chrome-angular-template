@@ -29,6 +29,8 @@ Prerequisites
 
 1. npm install -g cca
 2. cca checkenv
+3. cca pre-prepare
+4. cca prepare
 
 Running the android app
 -----------------------
