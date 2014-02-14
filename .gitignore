@@ -2,5 +2,5 @@ node_modules
 dist
 .tmp
 www/bower_components
-plugins
-platforms
+plugins/*
+platforms/*
