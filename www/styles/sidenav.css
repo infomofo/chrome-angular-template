@@ -1,0 +1,28 @@
+nav.st-nav {
+	background-color: #34495E;
+	z-index: 5;
+	color: #ECF0F1;
+}
+
+nav.st-nav .search{
+	margin: 10px;
+	margin-top: 60px;
+}
+
+.st-content {
+  display: inline;
+}
+
+.st-nav .list-group a.list-group-item, 
+.st-nav .list-group-item .list-group-item-heading, 
+.st-nav .input-group-addon {
+	border: 0;
+	color: #ECF0F1;
+	background-color: #2C3E50;
+}
+
+.st-nav .form-control {
+	background-color: #ECF0F1;
+	color: #2C3E50;
+	border: 0;
+}

@@ -1,0 +1,20 @@
+<form>
+  <fieldset>
+    <div class="input-group search">
+      <span class="input-group-addon"><i class="fa-search fa"></i></span>
+      <input type="text" class="form-control" placeholder="search">
+    </div>
+
+    <div class="list-group">
+      <a ng-click="closeSideNav()" class="list-group-item">
+        <h4 class="list-group-item-heading"><i class="fa fa-gear"></i> Settings</h4>
+      </a>
+      <a ng-click="closeSideNav()" class="list-group-item">
+        <h4 class="list-group-item-heading"><i class="fa fa-info-circle"></i> About</h4>
+      </a>
+      <a ng-click="untappd.logout();closeSideNav();" class="list-group-item">
+        <h4 class="list-group-item-heading"><i class="fa fa-key"></i> Log Out</h4>
+      </a>
+    </div>
+  </fieldset>
+</form>

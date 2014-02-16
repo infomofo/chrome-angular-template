@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('genericChromeApp',[]);
+angular.module('genericChromeApp',['slidenav']);

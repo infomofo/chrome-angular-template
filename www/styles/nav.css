@@ -1,0 +1,38 @@
+.navbar {
+  z-index: 10;
+  border: none;
+  height: 50px;
+  background-color: #3498DB;
+  color: #ECF0F1;
+}
+
+.navbar-yellow {
+  border-color: transparent;
+}
+
+.navbar-header {
+  padding-right: 5px; /* Are these too close to edge for touch? */
+  padding-left: 5px;
+  text-align: center;
+}
+.navbar-brand {
+  line-height: 30px;
+  float: none;
+  display: block;
+  margin: 0 41px; /* Stay away from buttons */
+}
+.navbar-brand img {
+  max-height:95%;
+  max-width:95%;
+}
+
+.navbar-btn {
+  width: 42px; /* Enforce same size regardless of which icon is used */
+}
+.navbar .btn-link {
+  color: #ECF0F1;
+  text-decoration: none; /* Buttons within navbars should not behave like links */
+}
+.navbar i[class^="icon-"] {
+  font-size: 24px;
+}

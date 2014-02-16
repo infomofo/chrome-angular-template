@@ -1,34 +1,26 @@
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Brand</a> 
-      <button type="button" class="btn btn-default navbar-btn pull-right"><i class="fa fa-gear"></i></button> 
-    </div><!-- /.navbar-collapse -->
-  </div>
-</nav>
-<div class="jumbotron" id="hero">
-  <div id="main">
-    <div class="container container-fluid">
-      <h1><strong>app name</strong></h1>
-      <p class="lead">this is your app</p>
-    </div>
-  </div>
-  <div id="promo_image">
-  </div>
-</div>
-<div class="container cards container-fluid">
-<div class="card col-sm-4">
-    <h2>what's happening</h2>
-    <p>In essence, a card is just a rectangular region which contains content.  This content could be text, images, lists, etc... The card UI methaphor dictates the interaction and layout of these regions.</p>
-</div>
+<div ng-include="'views/nav.html'"></div>
+<slidenav>
+  <slidenav-menu>
+    <div ng-include="'views/sidenav.html'"></div>
+  </slidenav-menu>
 
-<div class="card col-sm-4">
-    <h2>trending</h2>
-    <p>In essence, a card is just a rectangular region which contains content.  This content could be text, images, lists, etc... The card UI methaphor dictates the interaction and layout of these regions.</p>
-</div>
-<div class="card col-sm-4">
-    <h2>more info</h2>
-    <p>In essence, a card is just a rectangular region which contains content.  This content could be text, images, lists, etc... The card UI methaphor dictates the interaction and layout of these regions.</p>
-</div>
-</div>
+  <slidenav-content>
+    <div class="panel panel-success card">
+      <div class="panel-heading">
+        This is a card
+      </div>
+      <div class="panel-body media">
+        Cards are popular in mobile applications.
+      </div>
+    </div>
+
+    <div class="panel panel-success card">
+      <div class="panel-heading">
+        This is another card
+      </div>
+      <div class="panel-body media">
+        You can swipe cards to the right to dismiss it, or to the left for more information.
+      </div>
+    </div>
+  </slidenav-content>
+</slidenav>
