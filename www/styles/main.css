@@ -30,20 +30,26 @@ a, a:hover, a:link, a:active, a:visited {
     padding: 0px 0px 0px;
 }
 
-.card h2 {
-    margin:0px;
-    padding-bottom:0px;
-}
-
 .card .panel-heading {
   background-color: #1ABC9C;
   color: #ECF0F1;
   border-radius: 0;
 }
 
+.card h2 {
+    margin:0px;
+    padding-bottom:0px;
+}
+
 .card p {
     margin:0px;
     padding:10px;
+}
+
+.list-group-item:first-child, 
+.list-group-item:last-child,
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group>.btn, .input-group-btn:last-child>.dropdown-toggle, .input-group-btn:first-child>.btn:not(:first-child), .input-group-btn:first-child>.btn-group:not(:first-child)>.btn {
+  border-radius:0;
 }
 
 /* Customize container */
