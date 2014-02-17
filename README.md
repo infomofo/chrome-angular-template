@@ -33,15 +33,10 @@ First time Setup
 
 1. run ``npm install`` to initialize node modules
 2. run ``bower install`` to initialize bower dependencies
-3. install plugins
-   
-        cca plugin add org.chromium.bootstrap
-        cca plugin add org.chromium.navigation
-        cca plugin add org.apache.cordova.statusbar
-        cca plugin add org.apache.cordova.network-information
+3. run ``cca pre-prepare`` to initialize cordova plugins
+4. run ``cca platform add ios`` to add ios platform to project
+5. run ``./initializePlugins.sh`` to initialize plugins
 
-5. run ``cca pre-prepare`` to initialize cordova plugins
-6. run ``cca platform add ios`` to add ios platform to project
 
 ### Copying settings from chrome extension to android app
 
