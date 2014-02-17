@@ -21,6 +21,10 @@ a, a:hover, a:link, a:active, a:visited {
   padding-bottom:100px;
 }
 
+.bleed {
+  
+}
+
 .card {
     border: 0;
     position: relative;
