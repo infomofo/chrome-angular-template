@@ -4,3 +4,4 @@ dist
 .tmp
 www/bower_components
 platforms/*
+plugins/*
