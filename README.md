@@ -7,6 +7,16 @@ It provides many common visual conventions, including a pinned navbar, a slide o
 
 Special thanks to @sthomp for his [angular-slidenav.js](https://github.com/sthomp/angular-slidenav.js) project.
 
+How to use this repo
+--------------------
+
+At some point this will be a yeoman template or something, until then you can:
+
+1. Clone this repo and delete the .git directory
+2. Update the application name in www/manifest.mobile.json
+3. Update the application name in bower.json and package.json
+4. Follow the steps below to get the boilerplate app working. 
+
 First time Setup
 ----------------
 
