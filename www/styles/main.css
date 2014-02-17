@@ -25,7 +25,7 @@ a, a:hover, a:link, a:active, a:visited {
     border: 0;
     position: relative;
     background: #eff0f2;
-    border-radius: 6px 6px 6px 6px;
+    border-radius: 0;
     color: #34495e;
     padding: 0px 0px 0px;
 }
@@ -38,6 +38,7 @@ a, a:hover, a:link, a:active, a:visited {
 .card .panel-heading {
   background-color: #1ABC9C;
   color: #ECF0F1;
+  border-radius: 0;
 }
 
 .card p {
