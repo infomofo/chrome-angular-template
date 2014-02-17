@@ -2,11 +2,12 @@ nav.st-nav {
 	background-color: #34495E;
 	z-index: 5;
 	color: #ECF0F1;
+	overflow-y: hidden;
 }
 
 nav.st-nav .search{
 	margin: 10px;
-	margin-top: 60px;
+	margin-top: 70px;
 }
 
 .st-content {
@@ -14,11 +15,16 @@ nav.st-nav .search{
 }
 
 .st-nav .list-group a.list-group-item, 
-.st-nav .list-group-item .list-group-item-heading, 
-.st-nav .input-group-addon {
+.st-nav .list-group-item .list-group-item-heading {
 	border: 0;
 	color: #ECF0F1;
 	background-color: #2C3E50;
+}
+
+.st-nav .input-group-addon {
+	background-color: #34495E;
+	border: 0;
+	color: #ECF0F1;
 }
 
 .st-nav .form-control {

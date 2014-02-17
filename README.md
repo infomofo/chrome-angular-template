@@ -75,6 +75,7 @@ The android app can be run in an emulator, which can be installed with brew
 To run the android on an emulator or connected device
 
 1. Attach an android device in debug mode, or run the android avd emulator.
+2. if you are running on a connected device you can verify first with ``adb devices``
 2. run ``cca run android``
 
 ### Debugging the android app

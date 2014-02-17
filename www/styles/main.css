@@ -5,13 +5,29 @@ body {
   font-family: 'Droid Sans', sans-serif;
 }
 
+a, a:hover, a:link, a:active, a:visited {
+  text-decoration: none;
+}
+
+.scroll {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 110%; 
+  width: 100%;
+  position:fixed;
+  margin-top: -20px;
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom:100px;
+}
+
 .card {
-  position: relative;
-  background: #eff0f2;
-  border-radius: 6px 6px 6px 6px;
-  color: #34495e;
-  padding: 0px 0px 0px;
-  margin: 10px;
+    border: 0;
+    position: relative;
+    background: #eff0f2;
+    border-radius: 6px 6px 6px 6px;
+    color: #34495e;
+    padding: 0px 0px 0px;
 }
 
 .card h2 {
