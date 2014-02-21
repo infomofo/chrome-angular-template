@@ -1,9 +1,13 @@
 Generic Chrome Mobile Angular Application
 =========================================
 
-This is a generic app framework that can run as a standalone webpage, a chrome extension, an android app, or an ios app.
+This is a generic app framework that can run as a standalone webpage, a chrome extension, an android app, or an ios app.  It provides many common visual conventions, including a pinned navbar, a slide out side menu, and dismissable cards.
 
-It provides many common visual conventions, including a pinned navbar, a slide out side menu, and dismissable cards.
+![A Generic Chrome App running as a Chrome Extension](docs/images/ChromeExtensionSlideNav.png)
+
+![A Generic Chrome App running as a iOS App](docs/images/iPhoneAppSlideNav.png)
+
+![A Generic Chrome App running as an Android App](docs/images/AndroidAppSlideNav.png)
 
 Special thanks to @sthomp for his [angular-slidenav.js](https://github.com/sthomp/angular-slidenav.js) project.
 
