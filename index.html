@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Chrome-angular-template by infomofo</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Chrome-angular-template</h1>
+        <h2>a template for mobile apps in android, ios, and chrome backed by a yeoman angular project</h2>
+        <a href="https://github.com/infomofo/chrome-angular-template" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="generic-chrome-mobile-angular-application" class="anchor" href="#generic-chrome-mobile-angular-application"><span class="octicon octicon-link"></span></a>Generic Chrome Mobile Angular Application</h1>
+
+<p>This is a generic app framework that can run as a standalone webpage, a chrome extension, an android app, or an ios app.  It provides many common visual conventions, including a pinned navbar, a slide out side menu, and dismissable cards.</p>
+
+<p><img src="https://github.com/infomofo/chrome-angular-template/raw/master/docs/images/ChromeExtensionSlideNav.png" alt="A generic Chrome App running as a Chrome Extension"></p>
+
+<p><img src="https://github.com/infomofo/chrome-angular-template/raw/master/docs/images/iPhoneAppSlideNav.png" alt="A Generic Chrome App running as an iOS application"></p>
+
+<p>Special thanks to <a href="https://github.com/sthomp" class="user-mention">@sthomp</a> for his <a href="https://github.com/sthomp/angular-slidenav.js">angular-slidenav.js</a> project.</p>
+
+<h2>
+<a name="how-to-use-this-repo" class="anchor" href="#how-to-use-this-repo"><span class="octicon octicon-link"></span></a>How to use this repo</h2>
+
+<p>At some point this will be a yeoman template or something, until then you can:</p>
+
+<ol>
+<li>Clone this repo and delete the .git directory</li>
+<li>Update the application name in www/manifest.mobile.json</li>
+<li>Update the application name in bower.json and package.json</li>
+<li>Follow the steps below to get the boilerplate app working. </li>
+</ol><h2>
+<a name="first-time-setup" class="anchor" href="#first-time-setup"><span class="octicon octicon-link"></span></a>First time Setup</h2>
+
+<h3>
+<a name="setting-up-tools" class="anchor" href="#setting-up-tools"><span class="octicon octicon-link"></span></a>Setting up tools</h3>
+
+<ol>
+<li>run <code>npm install -g yo</code> to install yo, grunt-cli and bower</li>
+<li>run <code>npm install -g cca</code> to install the chrome mobile utility</li>
+<li>run <code>export PATH=/usr/local/share/npm/bin:$PATH</code> to ensure command line access to modules. </li>
+<li>run <code>cca checkenv</code> to ensure your machine is set up for mobile development.  If not this will instruct you on how to get Xcode and android development environments initialized for use with cca.</li>
+<li>run <code>npm install -g ios-deploy</code>
+</li>
+<li>run <code>npm install -g ios-sim</code>
+</li>
+</ol><h3>
+<a name="setting-up-the-repo-after-cloning-for-the-first-time" class="anchor" href="#setting-up-the-repo-after-cloning-for-the-first-time"><span class="octicon octicon-link"></span></a>Setting up the repo after cloning for the first time</h3>
+
+<ol>
+<li>run <code>npm install</code> to initialize node modules</li>
+<li>run <code>bower install</code> to initialize bower dependencies</li>
+<li>run <code>cca pre-prepare</code> to initialize cordova plugins</li>
+<li>run <code>cca platform add ios</code> to add ios platform to project</li>
+<li>run <code>./initializePlugins.sh</code> to initialize plugins</li>
+</ol><h3>
+<a name="copying-settings-from-chrome-extension-to-android-app" class="anchor" href="#copying-settings-from-chrome-extension-to-android-app"><span class="octicon octicon-link"></span></a>Copying settings from chrome extension to android app</h3>
+
+<p>Run this the first time, and any time after you make modifications to the <code>www</code> directory.</p>
+
+<ol>
+<li>run <code>cca prepare</code> to initialize the platforms directory with ios and android applications</li>
+<li>run <code>./copySplash</code> to copy splash screens from <code>www/res</code> to the platforms directories - this is currently not handled by cordova</li>
+</ol><h2>
+<a name="standalone-web-app" class="anchor" href="#standalone-web-app"><span class="octicon octicon-link"></span></a>Standalone web app</h2>
+
+<h3>
+<a name="running-the-web-application" class="anchor" href="#running-the-web-application"><span class="octicon octicon-link"></span></a>Running the web application</h3>
+
+<ol>
+<li>grunt serve</li>
+</ol><h2>
+<a name="chrome-extension" class="anchor" href="#chrome-extension"><span class="octicon octicon-link"></span></a>Chrome extension</h2>
+
+<p>The chrome extension is the easiest to modify and debug.</p>
+
+<h3>
+<a name="running-the-chrome-app" class="anchor" href="#running-the-chrome-app"><span class="octicon octicon-link"></span></a>Running the chrome app</h3>
+
+<ol>
+<li>In your chrome browser, enable chrome developer flags at <code>chrome://flags</code> and enable "Experimental Extension APIs"</li>
+<li>Go to Tools -&gt; Extensions</li>
+<li>Load Unpacked Extension- navigate to <code>./www</code>
+</li>
+</ol><h3>
+<a name="debugging-the-chrome-app" class="anchor" href="#debugging-the-chrome-app"><span class="octicon octicon-link"></span></a>Debugging the chrome app</h3>
+
+<p>The chrome app can be debugged with the standard "Inspect Element" debugger in a chrome web browser.</p>
+
+<h2>
+<a name="android" class="anchor" href="#android"><span class="octicon octicon-link"></span></a>Android</h2>
+
+<h3>
+<a name="running-the-android-app" class="anchor" href="#running-the-android-app"><span class="octicon octicon-link"></span></a>Running the android app</h3>
+
+<p>The android app can be run in an emulator, which can be installed with brew</p>
+
+<ol>
+<li>run <code>brew install android</code> to install the android toolkig</li>
+<li>run <code>android</code> to download packages and set up an avd device.</li>
+</ol><p>To run the android on an emulator or connected device</p>
+
+<ol>
+<li>Attach an android device in debug mode, or run the android avd emulator.</li>
+<li>if you are running on a connected device you can verify first with <code>adb devices</code>
+</li>
+<li>run <code>cca run android</code>
+</li>
+</ol><h3>
+<a name="debugging-the-android-app" class="anchor" href="#debugging-the-android-app"><span class="octicon octicon-link"></span></a>Debugging the android app</h3>
+
+<p>TODO</p>
+
+<h2>
+<a name="ios" class="anchor" href="#ios"><span class="octicon octicon-link"></span></a>IOS</h2>
+
+<h3>
+<a name="running-the-ios-app" class="anchor" href="#running-the-ios-app"><span class="octicon octicon-link"></span></a>Running the ios app</h3>
+
+<p>The ios app can be run in an emulator, which can be installed via xcode.  It can only be installed on devices with a valid provisioning profile, which requires a paid apple developer account.</p>
+
+<p>To run on a emulator</p>
+
+<ol>
+<li>run <code>cca emulate ios</code>
+</li>
+</ol><p>To run on a connected device (requires provisioning)</p>
+
+<ol>
+<li>run <code>cca run ios</code>
+</li>
+</ol><h3>
+<a name="debugging-the-ios-app" class="anchor" href="#debugging-the-ios-app"><span class="octicon octicon-link"></span></a>Debugging the ios app</h3>
+
+<ol>
+<li>Run Xcode</li>
+<li>Open <code>./platforms/ios/*.xcodeproj</code>
+</li>
+<li>Click Run</li>
+</ol><h3>
+<a name="debugging-the-ios-app-in-safari" class="anchor" href="#debugging-the-ios-app-in-safari"><span class="octicon octicon-link"></span></a>Debugging the ios app in safari</h3>
+
+<ol>
+<li>At the command line run <code>defaults write com.apple.Safari IncludeDebugMenu 1</code> (you only need to do this once)</li>
+<li>Launch the app in the emulator</li>
+<li>Launch safari </li>
+<li>Connect to the Iphone Simulator in the Develop menu</li>
+</ol><h2>
+<a name="extending-the-application" class="anchor" href="#extending-the-application"><span class="octicon octicon-link"></span></a>Extending the application</h2>
+
+<h3>
+<a name="adding-new-javascript-dependencies" class="anchor" href="#adding-new-javascript-dependencies"><span class="octicon octicon-link"></span></a>adding new javascript dependencies</h3>
+
+<ol>
+<li>Find a module with <code>bower search &lt;search term&gt;</code>
+</li>
+<li>Install it and save it to your bower.json file with <code>bower install &lt;javascript module&gt; --save</code>
+</li>
+</ol><h3>
+<a name="adding-new-plugins" class="anchor" href="#adding-new-plugins"><span class="octicon octicon-link"></span></a>adding new plugins</h3>
+
+<ol>
+<li><code>cca plugin add &lt;plugin name</code></li>
+<li><code>cca pre-prepare</code></li>
+<li><code>cca prepare</code></li>
+</ol><h2>
+<a name="file-documentation" class="anchor" href="#file-documentation"><span class="octicon octicon-link"></span></a>File documentation</h2>
+
+<h3>
+<a name="project-files" class="anchor" href="#project-files"><span class="octicon octicon-link"></span></a>Project files</h3>
+
+<ul>
+<li>
+<strong><code>README.md</code></strong> This file</li>
+<li>
+<strong><code>bower.json</code></strong> A list of all json dependencies.  <em>Do not modify directly</em>.  Add new dependencies with <code>bower install &lt;dependency name&gt; --save</code> </li>
+<li>
+<strong><code>config.xml</code></strong> A config file for cordova.</li>
+<li>
+<p><strong><code>www/</code></strong> All of the actual content of the app is contained in this directory</p>
+
+<ul>
+<li>
+<strong><code>index.html</code></strong> The skeleton of one-page application mostly just contains javascript and css imports.  Very little modifications should be made to this, other than new bower dependencies or css.</li>
+<li>
+<strong><code>manifest.json</code></strong> Defines how the chrome app will be packaged, including identifiers, oauth behaviors, permissions, icons, and version name.</li>
+<li>
+<strong><code>background.js</code></strong> Defines the behavior of the chrome app, including the landing page, and the window size of the chrome extension (does not affect ios or android).</li>
+<li>
+<strong><code>assets/</code></strong> Contains icons that will be used to represent the app</li>
+<li>
+<strong><code>bower_components/</code></strong> Contains external javascript and css dependencies brought in by bower.json.  Should not be version controlled or modified directly- make all modifications to <code>../bower.json</code> using <code>bower install --save</code>
+</li>
+<li>
+<strong><code>images/</code></strong> Contains all packaged images used by the application, i.e. logos.</li>
+<li>
+<strong><code>res/</code></strong> Contains resources used by the packaged apps, such as splash screens (TBD).</li>
+<li>
+<p><strong><code>scripts/</code></strong> Contains all angular scripts and javascript objects used by the application</p>
+
+<ul>
+<li>
+<strong><code>app.js</code></strong> Contains the definition for the main angular app</li>
+<li>
+<strong><code>controllers/</code></strong> Contains controllers for various parts of the application</li>
+</ul>
+</li>
+<li>
+<p><strong><code>styles/</code></strong> Contains custom stylesheets for the application    </p>
+
+<ul>
+<li>
+<strong><code>main.css</code></strong> Common css for the application</li>
+<li>
+<strong><code>nav.css</code></strong> Styling related to the top nav</li>
+<li>
+<strong><code>sidenav.css</code></strong> Styling related to the side nav</li>
+</ul>
+</li>
+<li>
+<p><strong><code>views/</code></strong> Contains different screens for the application</p>
+
+<ul>
+<li>
+<strong><code>main.html</code></strong> The landing page that the user first sees</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h3>
+<a name="files-not-kept-in-version-control" class="anchor" href="#files-not-kept-in-version-control"><span class="octicon octicon-link"></span></a>Files not kept in version control</h3>
+
+<ul>
+<li>
+<code>platforms/*</code> These files are generated by cca prepare</li>
+<li>
+<code>plugins/*</code> These files should be generated with cca plugin install as they vary by machine</li>
+<li>
+<code>node_modules/*</code> These files are generaetd by npm install</li>
+<li>
+<code>www/bower_components/*</code> These files are generated by bower install</li>
+</ul>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/infomofo/chrome-angular-template/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/infomofo/chrome-angular-template/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/infomofo/chrome-angular-template"></a> is maintained by <a href="https://github.com/infomofo">infomofo</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
