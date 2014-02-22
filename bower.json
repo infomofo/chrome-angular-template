@@ -10,7 +10,8 @@
     "angular-touch": "~1.2.12",
     "font-awesome": "~4.0.3",
     "angular-slidenav.js": "git://github.com/sthomp/angular-slidenav.js.git",
-    "underscore": "~1.6.0"
+    "underscore": "~1.6.0",
+    "angular-online-status": "infomofo/angular-online-status"
   },
   "devDependencies": {
     "angular-mocks": "1.2.6",

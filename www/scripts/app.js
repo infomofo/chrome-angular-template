@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('genericChromeApp',['slidenav']);
+angular.module('genericChromeApp',['slidenav', 'online-status']);
