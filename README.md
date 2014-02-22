@@ -9,7 +9,17 @@ This is a generic app framework that can run as a standalone webpage, a chrome e
 
 ![A Generic Chrome App running as an Android App](docs/images/AndroidAppSlideNav.png)
 
-Special thanks to @sthomp for his [angular-slidenav.js](https://github.com/sthomp/angular-slidenav.js) project.
+Features
+--------
+
+In addition to basic application scaffolding, this repo provides various common mobile application behaviors, provided by some external plugins.
+
+1. Special thanks to @sthomp for his [angular-slidenav.js](https://github.com/sthomp/angular-slidenav.js) project - the nav is pictured in the demo pictures above.
+2. A module for detecting online status is used to display an alert when your device does not have network service.  This is provided by [angular-online-status](https://github.com/infomofo/angular-online-status).
+3. A module for caching any externally referenced images in chrome local storage for offline access and persistence across device sessions is provided by [angular-chrome-image-storage](https://github.com/infomofo/angular-chrome-image-storage)
+
+
+In addition to 
 
 How to use this repo
 --------------------
