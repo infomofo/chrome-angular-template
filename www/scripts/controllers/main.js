@@ -25,4 +25,23 @@ angular.module('genericChromeApp')
 			slidenav.open();
 		}
 	}
+
+	$scope.cards = [
+		{
+			'title': 'Card 1',
+			'details': 'swipe right to dismiss this card'
+		},	
+		{
+			'title': 'Card 2',
+			'details': 'swipe right to dismiss this card'
+		}
+	];
+
+	$scope.removeCard = function(index) {
+		$scope.cards.splice(index,1);
+	}
+
+	$scope.setOffset = function (card, offset) {
+		card.offset = offset;
+	}
   });

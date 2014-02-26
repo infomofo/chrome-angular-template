@@ -1,5 +1,6 @@
-<div class="panel panel-success card beer">
+<div class="panel panel-success card beer" ng-repeat='card in cards' hm-drag="setOffset(card, $event.gesture.deltaX)" hm-dragend="setOffset(card, 0)" hm-swiperight="removeCard($index)" style="left: {{card.offset}}px">
   <div class="panel-body media">
-	Card
+	<h1>{{card.title}}</h1>
+	<p>{{card.details}}</p>
   </div>
 </div>
