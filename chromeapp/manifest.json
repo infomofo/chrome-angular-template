@@ -1,0 +1,14 @@
+{
+  "name": "Hello World!",
+  "description": "My first Chrome App.",
+  "version": "0.1",
+  "manifest_version": 2,
+  "permissions": [
+    "<all_urls>"
+  ],
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}
