@@ -3,6 +3,8 @@ YO ANGULAR CHROME
 
 Follow the commit history of this project to learn how to build a yeoman angular chrome app.
 
+[![Build Status](https://travis-ci.org/infomofo/chrome-angular-template.svg?branch=master)](https://travis-ci.org/infomofo/chrome-angular-template)
+
 To build a chrome app
 ---------------------
 
